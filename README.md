@@ -1,4 +1,3 @@
-# Lab 2 - Starter
-
+# Lab 3
 Link to published website:
-https://e7song.github.io/Lab2_Starter/
+https://e7song.github.io/sp25-cse110-lab3/

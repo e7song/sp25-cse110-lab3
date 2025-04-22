@@ -7,15 +7,25 @@ html {
     --random-color: #420;
 }
 
+* {
+    background: rgb(236, 230, 165); /* setting a default background color */
+}
+
 @supports (color: color(display-p3 0 0 0)) {
     :root {
       color: color(display-p3 0.69 0.48 0.96); /* default text color if it is supported*/
     }
+
+    * {
+        background-color: color-mix(
+            in display-p3, 
+            color(display-p3 1 1 0) 40%, 
+            color(display-p3 1 1 1) 60%
+        );
+    }
+
 }
 
-* {
-    background: rgb(236, 230, 165); /* setting a default background color */
-}
 
 a[href] { /* modifying an attribute--link in this case*/
     color: rgb(39, 180, 168);

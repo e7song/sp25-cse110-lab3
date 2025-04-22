@@ -7,6 +7,14 @@ html {
     --random-color: #420;
 }
 
+* {
+    background: rgb(236, 230, 165); /* setting a default background color */
+}
+
+a[href] { /* modifying an attribute--link in this case*/
+    color: rgb(39, 180, 168);
+    text-decoration: underline double;
+  }
 
 body {
     display: flex;            /* establish flex container */
@@ -78,6 +86,40 @@ nav {
 
 #agenda {
     color: navy; /* agenda all color */
+}
+
+/* selectors */
+section ol {
+    color: black;
+}
+
+fieldset > div {
+    color: rgb(14, 50, 107);
+}
+
+h2 ~ p {
+    color: rgb(60, 175, 34);
+}
+
+label + input {
+    color:rgb(60, 0, 255);
+    text-decoration: wavy;
+}
+
+div.form-question {
+    background: rgb(137, 156, 94);
+}
+
+section:has(a) {
+    background: white;
+}
+
+.form-question {
+    background: rgb(137, 156, 94);
+
+    & > label {
+        background: rgb(137, 156, 94);
+    }
 }
 
 li {

@@ -7,6 +7,12 @@ html {
     --random-color: #420;
 }
 
+@supports (color: color(display-p3 0 0 0)) {
+    :root {
+      color: color(display-p3 0.69 0.48 0.96); /* default text color if it is supported*/
+    }
+}
+
 * {
     background: rgb(236, 230, 165); /* setting a default background color */
 }
@@ -60,13 +66,6 @@ footer {
 header {
     background-color: #cfe2ef; /* nice sky blue background for the header */
 }
-
-@supports (color: color(display-p3 0 0 0)) {
-    :root {
-      color: color(display-p3 0.69 0.48 0.96); /* default text color if it is supported*/
-    }
-  }
-
 
 nav {
     color: var(--random-color, #1c8ad3);
@@ -125,6 +124,7 @@ section:has(a) {
 li {
     /* customizing my list elements*/
     height: fit-content;
+    max-height: 200%;
     width: fit-content;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -196,7 +196,8 @@ p {
 #logo {
     max-width: 15rem;
     min-width: 3rem;
-    max-height: auto;
+    max-height: none;
+    height: auto;
 }
 
 /* customizing my button behavior--color changes on click*/
